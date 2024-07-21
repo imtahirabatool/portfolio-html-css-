@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,7 @@
 
         .main {
             width: 100%;
-            background: url('bg.jpg') no-repeat center center/cover;
+            background: url('pic/bg.jpg') no-repeat center center/cover;
             height: 100vh;
             position: relative;
             color: #100e0e;
@@ -30,10 +31,10 @@
             display: flex;
             position: fixed;
             left: 0;
-    background: rgba(255, 255, 255, 0.9); 
-    z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
             top: 0;
-            padding: 7px 7px;
+            padding: 7px 20px;
             align-items: center;
             justify-content: space-between;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -42,7 +43,6 @@
         .navbar .logo {
             width: 100px;
             border-radius: 50%;
-            margin-left: 20px;
             cursor: pointer;
         }
 
@@ -64,7 +64,7 @@
         }
 
         ul li a:hover {
-            color: rgb(230,104,59);
+            color: rgb(230, 104, 59);
         }
 
         .info {
@@ -75,7 +75,7 @@
 
         .info h1 {
             font-size: 65px;
-            color: rgb(36,32,30);
+            color: rgb(36, 32, 30);
         }
 
         .info h3 {
@@ -85,13 +85,13 @@
         }
 
         .info span {
-            color: rgb(230,104,59);
+            color: rgb(230, 104, 59);
         }
 
         .info a {
             text-decoration: none;
             color: #fff;
-            background: rgb(36,32,30);
+            background: rgb(36, 32, 30);
             margin: 26px 0;
             padding: 10px 18px;
             border-radius: 10px;
@@ -100,7 +100,7 @@
         }
 
         .info a:hover {
-            background: rgb(59,174,209);
+            background: rgb(59, 174, 209);
         }
 
         .image {
@@ -159,16 +159,18 @@
             font-size: 18px;
             line-height: 1.6;
         }
-        
+
         .project-img {
-            width: 380px;
-            height: 150px;
-            margin-top: 1rem;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
         }
+
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1rem;
             margin-top: 1rem;
             padding: 0 10%;
@@ -178,13 +180,12 @@
             padding: 1rem;
             border: 1px solid #ddd;
             border-radius: 8px;
-            text-align: left;
+            text-align: center;
             background-color: #e5e0e0;
         }
 
         .project h3 {
             margin-bottom: 0.5rem;
-            text-align: center
         }
 
         .project p {
@@ -198,13 +199,13 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
-   
     </style>
 </head>
+
 <body>
     <div class="main">
         <div class="navbar">
-            <img src="logo.png" class="logo" alt="Logo">
+            <img src="pic/logo.png" class="logo" alt="Logo">
             <ul>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
@@ -212,9 +213,7 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
-<div>
-    <section id="home">
-        
+        <section id="home">
             <div class="info">
                 <h3>Hi, I'm <span>Hafsa Sajid</span>.</h3>
                 <h1><span>W</span>EB <span>D</span>ESIGNER</h1>
@@ -223,20 +222,24 @@
             </div>
 
             <div class="image">
-                <img src="Girlish-Cartoon-Dp-52.png" alt="Profile Image" class="girl">
+                <img src="pic/Girlish-Cartoon-Dp-52.png" alt="Profile Image" class="girl">
             </div>
-        </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="row">
             <div class="col">
-                <img class="img" src="Girlish-Cartoon-Dp-52.png" alt="Profile Image">
+                <img class="img" src="pic/Girlish-Cartoon-Dp-52.png" alt="Profile Image">
             </div>
             <div class="col">
-                <p class="lead para"><b>Hey! It's me Hafsa Sajid. I am a 2nd year BSCS student, I'm passionate about computer science and technology. Currently pursuing my Bachelor's degree in Computer Science, I have gained a foundation in programming and web development. Eager to expand my knowledge and skills, I am excited to explore various aspects of computer science. With a commitment to continuous learning, I look forward to collaborating with fellow students and professionals to contribute to the ever-evolving world of technology.</b></p>
+                <p class="lead para"><b>Hey! It's me Hafsa Sajid. I am a 2nd year BSCS student, I'm passionate about
+                        computer science and technology. Currently pursuing my Bachelor's degree in Computer Science, I
+                        have gained a foundation in programming and web development. Eager to expand my knowledge and
+                        skills, I am excited to explore various aspects of computer science. With a commitment to
+                        continuous learning, I look forward to collaborating with fellow students and professionals to
+                        contribute to the ever-evolving world of technology.</b></p>
             </div>
         </div>
     </section>
@@ -247,32 +250,32 @@
             <div class="projects-grid">
                 <div class="project">
                     <h3>Restaurant Menu</h3>
-                    <img src="restaurant-menu.png" alt="Project 1" class="project-img">
+                    <img src="pic/restaurant-menu.png" alt="Project 1" class="project-img">
                     <p>The website consisting of restaurant menu using React.js.</p>
                 </div>
                 <div class="project">
                     <h3>Weather Forecast</h3>
-                    <img src="weather-forecast.png" alt="Project 2" class="project-img">
+                    <img src="pic/weather-forecast.png" alt="Project 2" class="project-img">
                     <p>The app is use to find the weather of a specific city using Node.js.</p>
                 </div>
                 <div class="project">
                     <h3>To-Do List</h3>
-                    <img src="todo.png" alt="Project 3" class="project-img">
+                    <img src="pic/todo.png" alt="Project 3" class="project-img">
                     <p>It helps you to make a list of things to do using React.js.</p>
                 </div>
                 <div class="project">
                     <h3>Search Filter</h3>
-                    <img src="search filter.png" alt="Project 4" class="project-img">
+                    <img src="pic/search filter.png" alt="Project 4" class="project-img">
                     <p>Hepls you find text images using React.js.</p>
                 </div>
                 <div class="project">
                     <h3>Keep App</h3>
-                    <img src="keep app.png" alt="Project 5" class="project-img">
+                    <img src="pic/keep app.png" alt="Project 5" class="project-img">
                     <p>App that keeps your important notes using React.js.</p>
                 </div>
                 <div class="project">
                     <h3>Real Estate</h3>
-                    <img src="real estate.png" alt="Project 6" class="project-img">
+                    <img src="pic/real estate.png" alt="Project 6" class="project-img">
                     <p>A real-estate website for property dealers using MERN stack.</p>
                 </div>
             </div>
@@ -281,17 +284,16 @@
 
     <section id="contact" style="background-color: #f1f1f1;">
         <div class="container">
-            <h2 style="margin-bottom: 100px;">Contact Me</h2>
-            <p><strong>Email: </strong><br><a href="sajidhafsa23@gmail.com"></a>sajidhafsa23@gmail.com</p>
-            <p><strong>Instagram:</strong><br> <a href="https://www.instagram.com/hafsa_sajid52?igsh=aW53YjZhZzhhcHFo">instagram.com/in/hafsa.sajid</a></p>
-            <p><strong>LinkedIn: </strong><br><a href="https://www.linkedin.com/in/hafsa-sajid-38bb4627b/">linkedin.com/in/hafsasajid</a></p>
+            <h2>Contact Me</h2>
+            <p><strong>Email: </strong><br><a href="mailto:sajidhafsa23@gmail.com">sajidhafsa23@gmail.com</a></p>
+            <p><strong>LinkedIn: </strong><br><a href="https://www.linkedin.com/in/hafsa-sajid-8b307427b">Hafsa
+                    Sajid</a></p>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Hafsa Sajid. All rights reserved.</p>
-        </div>
+        <p>All rights reserved &copy; Hafsa Sajid</p>
     </footer>
 </body>
+
 </html>
